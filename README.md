@@ -1,15 +1,18 @@
 # EPCEncoderOSX
-Build the EPCEncoder lib and framework for OSX, includes Converter.
+Build the EPCEncoder framework for OSX, includes Converter.
 
 Note: most of this project leverages this great tutorial to create a framework:
 
 http://www.raywenderlich.com/65964/create-a-framework-for-ios
 
-For this version, I only got the framework to work not the static library.  This framework is only used for 
-GeniTag on the MacOS
+For this version, I only got the framework to work, not the static library.  This framework is only used for 
+GeniTag on the MacOS.
 
-The framework is in the build subdirectory.  This version also build the framework with every build, so the
-post run scripts are a little different than the tutorial linked above.
+IMPORTANT NOTE: all the .m and .h files in this project are identical to EPCEncoderiOS, and should be kept in
+sync.  This project is only to build the framework for the OSX architecture.
+
+The framework is in the build subdirectory.  This version also builds the framework with every build, so the
+post run scripts are a little different than the tutorial linked above and you don't have to do anything different.
 
 TPM - 11/18/15
 

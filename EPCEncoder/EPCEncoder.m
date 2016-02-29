@@ -15,9 +15,6 @@
 // NSString
 @import Foundation;
 
-// Convert
-#import "Converter.h"
-
 @implementation EPCEncoder {
     Converter *_convert;
 }

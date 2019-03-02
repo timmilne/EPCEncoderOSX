@@ -18,3 +18,11 @@ TPM - 11/18/15
 
 With the release of XCode 7 for iOS 9, you have to choose your platform.  Before you could use the same framework
 for both iOS and OSX.  No longer.  I've split this into two now, one framework for iOS and another for OSX.
+
+TPM - 2/28/19
+
+Added TCINEncoder and TIAIEncoder to the library:
+
+EPCEncoder - encodes UPCs in GS1 compliant EPC encodings
+TCINEncoder - encodes retail TCINs in non GS1 compliant RFID tags for Target internal use only
+TIAIEncoder - encodes non retail TIAIs in non GS1 compliant RFID tags for Target internal use only 

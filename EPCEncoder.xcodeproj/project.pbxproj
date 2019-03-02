@@ -14,6 +14,14 @@
 		B7CF43271BFCD118000AAC41 /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CF43241BFCD118000AAC41 /* Converter.m */; };
 		B7CF43281BFCD118000AAC41 /* EPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CF43251BFCD118000AAC41 /* EPCEncoder.m */; };
 		B7CF432A1BFCD137000AAC41 /* ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CF43291BFCD137000AAC41 /* ConverterTests.m */; };
+		B7E0D4EF222A3BBC00A2E511 /* SerialNumberGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E0D4ED222A3BBC00A2E511 /* SerialNumberGenerator.h */; };
+		B7E0D4F0222A3BBC00A2E511 /* SerialNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E0D4EE222A3BBC00A2E511 /* SerialNumberGenerator.m */; };
+		B7E0D4F7222A3BCB00A2E511 /* TCINEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E0D4F2222A3BCB00A2E511 /* TCINEncoder.m */; };
+		B7E0D4F8222A3BCB00A2E511 /* TCINEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E0D4F3222A3BCB00A2E511 /* TCINEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7E0D4F9222A3BCB00A2E511 /* TIAIEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E0D4F5222A3BCB00A2E511 /* TIAIEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7E0D4FA222A3BCB00A2E511 /* TIAIEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E0D4F6222A3BCB00A2E511 /* TIAIEncoder.m */; };
+		B7E0D500222A41A300A2E511 /* TCINEncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E0D4FF222A41A300A2E511 /* TCINEncoderTests.m */; };
+		B7E0D502222A41B500A2E511 /* TIAIEncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E0D501222A41B500A2E511 /* TIAIEncoderTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		B7CF43241BFCD118000AAC41 /* Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
 		B7CF43251BFCD118000AAC41 /* EPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPCEncoder.m; sourceTree = "<group>"; };
 		B7CF43291BFCD137000AAC41 /* ConverterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterTests.m; sourceTree = "<group>"; };
+		B7E0D4ED222A3BBC00A2E511 /* SerialNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialNumberGenerator.h; sourceTree = "<group>"; };
+		B7E0D4EE222A3BBC00A2E511 /* SerialNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialNumberGenerator.m; sourceTree = "<group>"; };
+		B7E0D4F2222A3BCB00A2E511 /* TCINEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCINEncoder.m; sourceTree = "<group>"; };
+		B7E0D4F3222A3BCB00A2E511 /* TCINEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCINEncoder.h; sourceTree = "<group>"; };
+		B7E0D4F5222A3BCB00A2E511 /* TIAIEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIAIEncoder.h; sourceTree = "<group>"; };
+		B7E0D4F6222A3BCB00A2E511 /* TIAIEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIAIEncoder.m; sourceTree = "<group>"; };
+		B7E0D4FF222A41A300A2E511 /* TCINEncoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCINEncoderTests.m; sourceTree = "<group>"; };
+		B7E0D501222A41B500A2E511 /* TIAIEncoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIAIEncoderTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +89,12 @@
 		B7CF42FF1BFCD029000AAC41 = {
 			isa = PBXGroup;
 			children = (
+				B7E0D4EC222A3AFA00A2E511 /* SerialNumberGenerator */,
+				B7E0D4EB222A3ABC00A2E511 /* Converter */,
 				B7CF430B1BFCD029000AAC41 /* EPCEncoder */,
-				B7CF43171BFCD029000AAC41 /* EPCEncoderTests */,
+				B7E0D4F1222A3BCB00A2E511 /* TCINEncoder */,
+				B7E0D4F4222A3BCB00A2E511 /* TIAIEncoder */,
+				B7CF43171BFCD029000AAC41 /* EncoderTests */,
 				B7CF430A1BFCD029000AAC41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,8 +111,6 @@
 		B7CF430B1BFCD029000AAC41 /* EPCEncoder */ = {
 			isa = PBXGroup;
 			children = (
-				B7CF43231BFCD117000AAC41 /* Converter.h */,
-				B7CF43241BFCD118000AAC41 /* Converter.m */,
 				B7CF430C1BFCD029000AAC41 /* EPCEncoder.h */,
 				B7CF43251BFCD118000AAC41 /* EPCEncoder.m */,
 				B7CF430E1BFCD029000AAC41 /* Info.plist */,
@@ -100,14 +118,52 @@
 			path = EPCEncoder;
 			sourceTree = "<group>";
 		};
-		B7CF43171BFCD029000AAC41 /* EPCEncoderTests */ = {
+		B7CF43171BFCD029000AAC41 /* EncoderTests */ = {
 			isa = PBXGroup;
 			children = (
 				B7CF43291BFCD137000AAC41 /* ConverterTests.m */,
 				B7CF43181BFCD029000AAC41 /* EPCEncoderTests.m */,
+				B7E0D4FF222A41A300A2E511 /* TCINEncoderTests.m */,
+				B7E0D501222A41B500A2E511 /* TIAIEncoderTests.m */,
 				B7CF431A1BFCD029000AAC41 /* Info.plist */,
 			);
-			path = EPCEncoderTests;
+			path = EncoderTests;
+			sourceTree = "<group>";
+		};
+		B7E0D4EB222A3ABC00A2E511 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				B7CF43231BFCD117000AAC41 /* Converter.h */,
+				B7CF43241BFCD118000AAC41 /* Converter.m */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		B7E0D4EC222A3AFA00A2E511 /* SerialNumberGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B7E0D4ED222A3BBC00A2E511 /* SerialNumberGenerator.h */,
+				B7E0D4EE222A3BBC00A2E511 /* SerialNumberGenerator.m */,
+			);
+			path = SerialNumberGenerator;
+			sourceTree = "<group>";
+		};
+		B7E0D4F1222A3BCB00A2E511 /* TCINEncoder */ = {
+			isa = PBXGroup;
+			children = (
+				B7E0D4F2222A3BCB00A2E511 /* TCINEncoder.m */,
+				B7E0D4F3222A3BCB00A2E511 /* TCINEncoder.h */,
+			);
+			path = TCINEncoder;
+			sourceTree = "<group>";
+		};
+		B7E0D4F4222A3BCB00A2E511 /* TIAIEncoder */ = {
+			isa = PBXGroup;
+			children = (
+				B7E0D4F5222A3BCB00A2E511 /* TIAIEncoder.h */,
+				B7E0D4F6222A3BCB00A2E511 /* TIAIEncoder.m */,
+			);
+			path = TIAIEncoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CF43261BFCD118000AAC41 /* Converter.h in Headers */,
+				B7E0D4EF222A3BBC00A2E511 /* SerialNumberGenerator.h in Headers */,
 				B7CF430D1BFCD029000AAC41 /* EPCEncoder.h in Headers */,
+				B7E0D4F8222A3BCB00A2E511 /* TCINEncoder.h in Headers */,
+				B7E0D4F9222A3BCB00A2E511 /* TIAIEncoder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,8 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E0D4F0222A3BBC00A2E511 /* SerialNumberGenerator.m in Sources */,
 				B7CF43271BFCD118000AAC41 /* Converter.m in Sources */,
+				B7E0D4F7222A3BCB00A2E511 /* TCINEncoder.m in Sources */,
 				B7CF43281BFCD118000AAC41 /* EPCEncoder.m in Sources */,
+				B7E0D4FA222A3BCB00A2E511 /* TIAIEncoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +310,8 @@
 			files = (
 				B7CF432A1BFCD137000AAC41 /* ConverterTests.m in Sources */,
 				B7CF43191BFCD029000AAC41 /* EPCEncoderTests.m in Sources */,
+				B7E0D500222A41A300A2E511 /* TCINEncoderTests.m in Sources */,
+				B7E0D502222A41B500A2E511 /* TIAIEncoderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

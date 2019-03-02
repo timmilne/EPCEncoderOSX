@@ -15,6 +15,9 @@
 // NSString
 @import Foundation;
 
+// Convert
+#import "Converter.h"
+
 @implementation EPCEncoder {
     Converter *_convert;
 }
@@ -276,6 +279,18 @@
     for (int i=(int)[serBin length]; i<(int)38; i++) {
         serBin = [NSString stringWithFormat:@"0%@", serBin];
     }
+    
+    // The return from Dec2Bin is multiples of 4, so chop off any leading bits for fields that aren't
+    if ([mgrBin length] > mgrBinLen) {
+        mgrBin = [mgrBin substringFromIndex:([mgrBin length] - mgrBinLen)];
+    }
+    if ([itmBin length] > itmBinLen) {
+        itmBin = [mgrBin substringFromIndex:([itmBin length] - itmBinLen)];
+    }
+    if ([serBin length] > 38) {
+        serBin = [mgrBin substringFromIndex:([serBin length] - 38)];
+    }
+    
     [self setSgtin_bin:[NSString stringWithFormat:@"%@001%@%@%@%@",SGTIN_Bin_Prefix,partBin,mgrBin,itmBin,serBin]];
     [self setSgtin_hex:[_convert Bin2Hex:(_sgtin_bin)]];
     [self setSgtin_uri:[NSString stringWithFormat:@"%@%@.%@.%@",SGTIN_URI_Prefix,mgrDec,itmDec,_ser]];

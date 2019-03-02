@@ -1,6 +1,6 @@
 //
 //  EPCEncoderTests.m
-//  ValiTag
+//  EPCEncoder
 //
 //  Created by Tim.Milne on 8/14/15.
 //  Copyright (c) 2015 Tim.Milne. All rights reserved.
@@ -65,6 +65,7 @@
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_bin], @"withDptClsItmSer: Test 1 Part 5 Failed");
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_hex], @"withDptClsItmSer: Test 1 Part 6 Failed");
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_uri], @"withDptClsItmSer: Test 1 Part 7 Failed");
+    XCTAssertTrue([[_encode gid_bin] length] == 96,           @"withDptClsItmSer: Test 1 Part 8 Failed");
 }
 
 - (void)testGidWithGTIN{
@@ -87,6 +88,7 @@
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_bin], @"gidWithGTIN: Test 1 Part 5 Failed");
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_hex], @"gidWithGTIN: Test 1 Part 6 Failed");
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_uri], @"gidWithGTIN: Test 1 Part 7 Failed");
+    XCTAssertTrue([[_encode gid_bin] length] == 96,           @"gidWithGTIN: Test 1 Part 8 Failed");
     
     _gtin   = @"052175551276";
     _ser = @"100012345";
@@ -105,6 +107,7 @@
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_bin], @"gidWithGTIN: Test 2 Part 5 Failed");
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_hex], @"gidWithGTIN: Test 2 Part 6 Failed");
     XCTAssertEqualObjects(_test_empty  , [_encode sgtin_uri], @"gidWithGTIN: Test 2 Part 7 Failed");
+    XCTAssertTrue([[_encode gid_bin] length] == 96,           @"gidWithGTIN: Test 2 Part 8 Failed");
 }
 
 - (void)testWithGtinSerPartBin{
@@ -126,6 +129,7 @@
     XCTAssertEqualObjects(_test_empty    , [_encode gid_bin],   @"withGtinSerPartBin: Test 1 Part 7 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_hex],   @"withGtinSerPartBin: Test 1 Part 8 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_uri],   @"withGtinSerPartBin: Test 1 Part 9 Failed");
+    XCTAssertTrue([[_encode sgtin_bin] length] == 96,           @"withGtinSerPartBin: Test 1 Part 10 Failed");
     
     _partBin = @"001"; // Mgr len 11, Itm len 2
     [_encode withGTIN:_gtin ser:_ser partBin:_partBin];
@@ -142,6 +146,7 @@
     XCTAssertEqualObjects(_test_empty    , [_encode gid_bin],   @"withGtinSerPartBin: Test 2 Part 7 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_hex],   @"withGtinSerPartBin: Test 2 Part 8 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_uri],   @"withGtinSerPartBin: Test 2 Part 9 Failed");
+    XCTAssertTrue([[_encode sgtin_bin] length] == 96,           @"withGtinSerPartBin: Test 2 Part 10 Failed");
     
     _partBin = @"010"; // Mgr len 10, Itm len 3
     [_encode withGTIN:_gtin ser:_ser partBin:_partBin];
@@ -158,6 +163,7 @@
     XCTAssertEqualObjects(_test_empty    , [_encode gid_bin],   @"withGtinSerPartBin: Test 3 Part 7 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_hex],   @"withGtinSerPartBin: Test 3 Part 8 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_uri],   @"withGtinSerPartBin: Test 3 Part 9 Failed");
+    XCTAssertTrue([[_encode sgtin_bin] length] == 96,           @"withGtinSerPartBin: Test 3 Part 10 Failed");
     
     _partBin = @"011"; // Mgr len 9, Itm len 4
     [_encode withGTIN:_gtin ser:_ser partBin:_partBin];
@@ -174,6 +180,7 @@
     XCTAssertEqualObjects(_test_empty    , [_encode gid_bin],   @"withGtinSerPartBin: Test 4 Part 7 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_hex],   @"withGtinSerPartBin: Test 4 Part 8 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_uri],   @"withGtinSerPartBin: Test 4 Part 9 Failed");
+    XCTAssertTrue([[_encode sgtin_bin] length] == 96,           @"withGtinSerPartBin: Test 4 Part 10 Failed");
     
     _partBin = @"100"; // Mgr len 8, Itm len 5
     [_encode withGTIN:_gtin ser:_ser partBin:_partBin];
@@ -190,6 +197,7 @@
     XCTAssertEqualObjects(_test_empty    , [_encode gid_bin],   @"withGtinSerPartBin: Test 5 Part 7 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_hex],   @"withGtinSerPartBin: Test 5 Part 8 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_uri],   @"withGtinSerPartBin: Test 5 Part 9 Failed");
+    XCTAssertTrue([[_encode sgtin_bin] length] == 96,           @"withGtinSerPartBin: Test 5 Part 10 Failed");
 
     _partBin = @"101"; // Mgr len 7, Itm len 6
     [_encode withGTIN:_gtin ser:_ser partBin:_partBin];
@@ -206,6 +214,7 @@
     XCTAssertEqualObjects(_test_empty    , [_encode gid_bin],   @"withGtinSerPartBin: Test 6 Part 7 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_hex],   @"withGtinSerPartBin: Test 6 Part 8 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_uri],   @"withGtinSerPartBin: Test 6 Part 9 Failed");
+    XCTAssertTrue([[_encode sgtin_bin] length] == 96,           @"withGtinSerPartBin: Test 6 Part 10 Failed");
 
     _partBin = @"110"; // Mgr len 6, Itm len 7
     [_encode withGTIN:_gtin ser:_ser partBin:_partBin];
@@ -222,6 +231,7 @@
     XCTAssertEqualObjects(_test_empty    , [_encode gid_bin],   @"withGtinSerPartBin: Test 7 Part 7 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_hex],   @"withGtinSerPartBin: Test 7 Part 8 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode gid_uri],   @"withGtinSerPartBin: Test 7 Part 9 Failed");
+    XCTAssertTrue([[_encode sgtin_bin] length] == 96,           @"withGtinSerPartBin: Test 7 Part 10 Failed");
 }
 
 - (void)testCalculateCheckDigit{

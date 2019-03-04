@@ -1,4 +1,9 @@
 # EPCEncoderOSX
+TPM - 3/3/19
+
+Use RFIDEncoderiOS going forward.
+
+
 Build the EPCEncoder framework for OSX, includes Converter.
 
 Note: most of this project leverages this great tutorial to create a framework:

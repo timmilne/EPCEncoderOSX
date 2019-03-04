@@ -298,8 +298,8 @@
 			files = (
 				B7E0D4F0222A3BBC00A2E511 /* SerialNumberGenerator.m in Sources */,
 				B7CF43271BFCD118000AAC41 /* Converter.m in Sources */,
-				B7E0D4F7222A3BCB00A2E511 /* TCINEncoder.m in Sources */,
 				B7CF43281BFCD118000AAC41 /* EPCEncoder.m in Sources */,
+				B7E0D4F7222A3BCB00A2E511 /* TCINEncoder.m in Sources */,
 				B7E0D4FA222A3BCB00A2E511 /* TIAIEncoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
